@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17a6e3">
+  <title>Base técnica | Suporte TI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell" id="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#inicio" aria-label="Suporte TI, início">
+        <span class="brand-mark">s.</span>
+        <span class="brand-name">suporte <span>ti</span></span>
+      </a>
+      <div class="topbar-right">
+        <span class="workspace-label">Base de conhecimento</span>
+        <div class="user-chip"><span class="avatar" aria-hidden="true">TI</span><span>Equipe de suporte</span></div>
+        <button class="button-secondary logout-button" id="logout-button" type="button">Sair</button>
+      </div>
+    </header>
+
+    <main class="page-wrap" id="inicio">
+      <div class="crumb">Espaço de trabalho <span>/</span> Conhecimento</div>
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <div class="eyebrow">Suporte &amp; operações</div>
+          <h1 id="page-title">Base Técnica</h1>
+          <p>Manuais, procedimentos e orientações para resolver chamados com segurança e consistência.</p>
+        </div>
+        <button class="button-primary" id="add-document" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          Novo documento
+        </button>
+      </section>
+
+      <div class="search-row">
+        <label class="search-box" for="search-input">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+          <input id="search-input" type="search" placeholder="Buscar por título, assunto ou palavra-chave..." autocomplete="off">
+          <span class="search-hint" aria-hidden="true">/</span>
+        </label>
+        <select class="sort-select" id="sort-select" aria-label="Ordenar documentos">
+          <option value="recent">Mais recentes</option>
+          <option value="az">Ordem A–Z</option>
+        </select>
+      </div>
+
+      <div class="dashboard">
+        <aside class="sidebar" aria-label="Navegação da base">
+          <div>
+            <p class="side-label">Biblioteca</p>
+            <nav class="side-nav" id="main-nav">
+              <button class="nav-item active" type="button" data-filter="all"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><rect x="13.5" y="13.5" width="7" height="7" rx="1"/></svg></span>Todos os documentos<span class="nav-count" id="count-all"></span></button>
+              <button class="nav-item" type="button" data-filter="favoritos"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg></span>Favoritos<span class="nav-count" id="count-favorites"></span></button>
+            </nav>
+            <p class="side-label">Categorias</p>
+            <nav class="side-nav" id="category-nav">
+              <button class="nav-item" type="button" data-filter="Procedimento"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 3.5h7l4 4V20a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z"/><path d="M14 3.5v5h5M9 13h6M9 16.5h6"/></svg></span>Procedimentos<span class="nav-count" data-count="Procedimento"></span></button>
+              <button class="nav-item" type="button" data-filter="Manual"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21V5.5Z"/><path d="M4 17a2.5 2.5 0 0 1 2.5-2.5H20M8 7h7"/></svg></span>Manuais<span class="nav-count" data-count="Manual"></span></button>
+              <button class="nav-item" type="button" data-filter="Segurança"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 20 6v5.5c0 4.5-3.4 7.8-8 9.5-4.6-1.7-8-5-8-9.5V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg></span>Segurança digital<span class="nav-count" data-count="Segurança"></span></button>
+              <button class="nav-item" type="button" data-filter="Fluxo"><span class="nav-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="8" y="3" width="8" height="5" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/><rect x="14" y="16" width="7" height="5" rx="1"/><path d="M12 8v4m-5 4v-3h10v3"/></svg></span>Fluxos e diagramas<span class="nav-count" data-count="Fluxo"></span></button>
+            </nav>
+          </div>
+          <div class="sidebar-note"><strong>Conhecimento compartilhado</strong><p>Encontrou algo desatualizado? Revise o conteúdo antes de seguir o procedimento.</p></div>
+        </aside>
+
+        <section class="content" aria-label="Documentos">
+          <div class="section-head"><h2 id="list-heading">Atualizados recentemente</h2><span class="result-count" id="result-count" aria-live="polite"></span></div>
+          <div class="doc-list" id="document-list"></div>
+          <div class="footer-line">Conteúdo interno de suporte · Consulte a data de revisão antes de executar procedimentos críticos.</div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <img src="logo_suporte.png" alt="Logo SUPORTE" class="footer-logo">
+      </div>
+      <div class="footer-info">
+        
+        <p>Copyright 2026. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </div>
+
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <div class="dialog-head"><div><div class="dialog-kicker" id="detail-kicker"></div><h2 id="detail-title"></h2></div><button class="dialog-close" type="button" data-close aria-label="Fechar">&times;</button></div>
+    <div class="dialog-content" id="detail-content"></div>
+    <div class="detail-actions">
+      <button class="button-secondary" id="edit-document" type="button">Editar documento</button>
+      <button class="button-danger" id="delete-document" type="button">Excluir documento</button>
+    </div>
+  </dialog>
+
+  <dialog id="delete-dialog" aria-labelledby="delete-title">
+    <div class="dialog-head"><div><div class="dialog-kicker">Ação permanente</div><h2 id="delete-title">Excluir documento?</h2></div><button class="dialog-close" type="button" data-close aria-label="Fechar">&times;</button></div>
+    <div class="dialog-content">
+      <p class="delete-copy" id="delete-copy"></p>
+      <div class="form-actions"><button class="button-secondary" type="button" data-close>Cancelar</button><button class="button-danger" id="confirm-delete" type="button">Excluir documento</button></div>
+    </div>
+  </dialog>
+
+  <dialog id="create-dialog" aria-labelledby="create-title">
+    <div class="dialog-head"><div><div class="dialog-kicker">Biblioteca da equipe</div><h2 id="create-title">Adicionar documento</h2></div><button class="dialog-close" type="button" data-close aria-label="Fechar">&times;</button></div>
+    <div class="dialog-content">
+      <form id="create-form">
+        <div class="form-grid">
+          <div class="field full"><label for="new-title">Título</label><input id="new-title" name="title" required maxlength="90" placeholder="Ex.: Configuração de VPN"></div>
+          <div class="field"><label for="new-category">Categoria</label><select id="new-category" name="category"><option>Procedimento</option><option>Manual</option><option>Segurança</option><option>Fluxo</option></select></div>
+          <div class="field"><label for="new-owner">Responsável</label><input id="new-owner" name="owner" maxlength="40" placeholder="Equipe de suporte"></div>
+          <div class="field full"><label for="new-summary">Resumo</label><textarea id="new-summary" name="summary" required maxlength="280" placeholder="Descreva quando e por que consultar este documento."></textarea></div>
+          <div class="field full"><label for="new-steps">Conteúdo ou etapas</label><textarea id="new-steps" name="steps" required placeholder="Digite uma etapa por linha."></textarea></div>
+          <div class="field full image-upload-field"><label for="new-image">Imagem do documento</label><input id="new-image" name="image" type="file" accept="image/png,image/jpeg,image/gif,image/webp"><small>PNG, JPG, GIF ou WebP · até 1 MB</small><div class="image-upload-preview" id="image-preview" hidden><img id="image-preview-img" alt="Prévia da imagem do documento"></div><button class="button-secondary remove-image-button" id="remove-image" type="button" hidden>Remover imagem</button></div>
+        </div>
+        <div class="form-actions"><button class="button-secondary" type="button" data-close>Cancelar</button><button class="button-primary" type="submit">Salvar documento</button></div>
+      </form>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

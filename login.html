@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17a6e3">
+  <title>Login | Suporte TI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-screen" id="login-screen" aria-live="polite">
+    <div class="login-panel">
+      <div class="login-brand" aria-label="Suporte TI">
+        <span class="brand-mark">S.</span>
+        <span class="brand-name">suporte <span>ti</span></span>
+      </div>
+      <div class="login-copy">
+        <p class="login-kicker">Acesso ao sistema</p>
+        <h1>Base Técnica</h1>
+        <p>Entre para acessar manuais, procedimentos e fluxos internos da equipe.</p>
+      </div>
+      <form id="login-form" class="login-form">
+        <label class="field">
+          <span>Usuário</span>
+          <input id="login-username" name="username" type="text" placeholder="Digite seu usuário" autocomplete="username" required>
+        </label>
+        <label class="field">
+          <span>Senha</span>
+          <input id="login-password" name="password" type="password" placeholder="Digite sua senha" autocomplete="current-password" required>
+        </label>
+        <button type="submit" class="button-primary login-button">Entrar</button>
+        <div class="beta-box">
+          <span>Beta</span>
+          <small>admin / admin123</small>
+        </div>
+        <p id="login-error" class="login-error" aria-live="assertive"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="login.js" defer></script>
+</body>
+</html>
