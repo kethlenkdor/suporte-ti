@@ -28,7 +28,7 @@ Este projeto é uma aplicação web de base de conhecimento para suporte e opera
 - home.html — interface principal da base de conhecimento;
 - script.js — lógica da home, filtros, documentos, modais e persistência;
 - styles.css — layout visual completo, responsividade e identidade do sistema;
-- logo_semsa.png — logo institucional exibida no rodapé;
+- logo_suporte.png — logo institucional exibida no rodapé;
 - README.md — documentação do projeto.
 
 ## Como usar
