@@ -1,4 +1,4 @@
-# Base de conhecimento Nexo TI
+# Base de conhecimento Suporte TI
 
 Este projeto é uma aplicação web de base de conhecimento para suporte e operações internas. A interface permite:
 
@@ -60,7 +60,7 @@ Este projeto é uma aplicação web de base de conhecimento para suporte e opera
 
 ## Layout e identidade visual
 
-A aplicação utiliza uma paleta principal em azul com a cor #17a6e3, com foco em uma aparência moderna, clara e profissional. O rodapé institucional foi elaborado com os dados da Prefeitura Municipal de Manaus, incluindo a logo SEMSA, CNPJ, endereço e copyright.
+A aplicação utiliza uma paleta principal em azul com a cor #17a6e3, com foco em uma aparência moderna, clara e profissional. O rodapé institucional foi elaborado com a logo Suporte, cidade e copyright.
 
 ## Créditos e uso
 
